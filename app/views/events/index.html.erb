@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "events.scss" %>
+
+<% @events.each do |event| %>
+  <div class="col-md-4 jumbotron">
+    <h3><%= event.start_time_format %></h3>
+    <h2><%= event.name %></h2>
+    <br/>
+    <p><%= event.description %></p>
+    <a><%= link_to 'Details', event, class: "btn btn-default" %></a>
+    <br/>
+  </div>
+<% end %>
